@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- AUTOWIRE BY NAME -->
+    <bean id="customer"
+          class="be.businesstraining.autowire_by_name.domain.Customer" autowire="byName">
+    </bean>
+
+    <bean id="address" class="be.businesstraining.autowire_by_name.domain.Address">
+        <property name="fullAddress" value="Rue de la régence 58, Bruxelles"></property>
+    </bean>
+    <bean id="address1" class="be.businesstraining.autowire_by_name.domain.Address">
+        <property name="fullAddress" value="Une autre adress"></property>
+    </bean>
+
+    <!-- AUTOWIRE BY CONSTRUCTOR -->
+    <bean id="languagePrefere" class="be.businesstraining.autowire_by_constructor.domain.Language">
+        <property name="name" value="Java"></property>
+    </bean>
+
+    <bean id="dounia"
+          class="be.businesstraining.autowire_by_constructor.domain.Developer"  autowire="constructor">
+
+
+    </bean>
+
+
+</beans>
