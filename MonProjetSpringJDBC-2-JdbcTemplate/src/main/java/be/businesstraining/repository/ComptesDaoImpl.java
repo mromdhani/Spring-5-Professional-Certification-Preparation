@@ -37,7 +37,7 @@ public class ComptesDaoImpl extends  JdbcDaoSupport
     @Override
     public Compte findById(String id) {
         String  sql = "SELECT * FROM COMPTES WHERE NUMERO = ?";
-        return getJdbcTemplate().execute();queryForObject(sql,
+        return getJdbcTemplate().queryForObject(sql,
                 new Object[]{id},
                     //                (resultSet, i) -> new Compte(
 //                              resultSet.getString("Numero"),
